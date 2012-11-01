@@ -1,0 +1,87 @@
+= form_for @otto_view_raw_trip do |f|
+  -if @otto_view_raw_trip.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@otto_view_raw_trip.errors.count, "error")} prohibited this otto_view_raw_trip from being saved:"
+      %ul
+        - @otto_view_raw_trip.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :serial_number
+    = f.number_field :serial_number
+  .field
+    = f.label :trip_number
+    = f.number_field :trip_number
+  .field
+    = f.label :trip_distance
+    = f.text_field :trip_distance
+  .field
+    = f.label :trip_duration
+    = f.text_field :trip_duration
+  .field
+    = f.label :trip_fuel_cost
+    = f.text_field :trip_fuel_cost
+    
+  .field
+    = f.label :current_time
+    = f.datetime_select :current_time
+  .field
+    = f.label :latitude
+    = f.text_field :latitude
+  .field
+    = f.label :longitude
+    = f.text_field :longitude
+
+  .field
+    = f.label :trip_fuel_usage
+    = f.text_field :trip_fuel_usage
+  .field
+    = f.label :fuel_price
+    = f.text_field :fuel_price
+  .field
+    = f.label :trip_fuel_cost
+    = f.text_field :trip_fuel_cost
+  .field
+    = f.label :trip_operating_cost
+    = f.text_field :trip_operating_cost
+  .field
+    = f.label :average_economy
+    = f.text_field :average_economy
+  .field
+    = f.label :survey_completed
+    = f.text_field :survey_completed
+  .field
+    = f.label :driver_number
+    = f.number_field :driver_number
+  .field
+    = f.label :passengers8
+    = f.number_field :passengers8
+  .field
+    = f.label :passengers15
+    = f.number_field :passengers15
+  .field
+    = f.label :passengers24
+    = f.number_field :passengers24
+  .field
+    = f.label :passengers64
+    = f.number_field :passengers64
+  .field
+    = f.label :passengers74
+    = f.number_field :passengers74
+  .field
+    = f.label :passengers75plus
+    = f.number_field :passengers75plus
+  .field
+    = f.label :trip_destination
+    = f.text_field :trip_destination
+  .field
+    = f.label :imei
+    = f.number_field :imei
+  .field
+    = f.label :imsi
+    = f.number_field :imsi
+  .field
+    = f.label :report_time
+    = f.datetime_select :report_time
+  .actions
+    = f.submit 'Save'

@@ -1,0 +1,12 @@
+
+%a{"data-toggle" => "modal", :href => "#trainingModal"} 
+  %img{src: "/assets/challenge/4.png"}
+
+#trainingModal.modal{"aria-hidden" => "true", "aria-labelledby" => "trainingModalLabel", :role => "dialog", :tabindex => "-1",  style: "display: none;"}
+  .modal-header
+    %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} ×
+    %h3#trainingModalLabel Training
+  .modal-body
+    = render partial: '/pages/my_challenge/six_steps/text_training' 
+    %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} close
+

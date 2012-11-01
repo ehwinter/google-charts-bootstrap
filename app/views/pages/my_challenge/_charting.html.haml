@@ -1,0 +1,18 @@
+.row
+  .span9{style: "position:relative;"}
+  
+    = render partial: '/pages/my_challenge/header_static_test'
+    .div{style: "position: absolute; top: 63px; left: 200px; z-index: 1;"}
+      = render partial: '/pages/my_challenge/six_steps/modal_survey'
+      = render partial: '/pages/my_challenge/six_steps/modal_install'
+      = render partial: '/pages/my_challenge/six_steps/modal_baseline'
+      = render partial: '/pages/my_challenge/six_steps/modal_training'
+      = render partial: '/pages/my_challenge/six_steps/modal_challenge'
+      = render partial: '/pages/my_challenge/six_steps/modal_payout'
+
+    = render partial: '/pages/my_challenge/km_travelled'  
+    = render partial: '/pages/my_challenge/gas_consumption'       
+  .span3
+    = render partial: '/layouts/log_in'    
+    = render partial: '/pages/shuttle_beats'
+/=render partial: '/pages/my_challenge/charts_old_test'

@@ -1,0 +1,32 @@
+/*
+ * Shuttle Bootstrap Overrides
+ * 
+ * This is where existing standard colors are overridden.
+ *  
+ * See: https://github.com/twitter/bootstrap/blob/master/less/variables.less
+ */
+
+$btnPrimaryBackground: $sBabyBlueEyes;
+// Navbar
+$navbarHeight:                    105px;
+
+$navbarBackground:                #ffffff;
+$navbarBorder:                    $sDoveGray;
+
+$navbarText:                      $sDoveGray;
+$navbarLinkColor:                 $sDoveGray;
+$navbarLinkColorHover:            white;
+$navbarLinkBackgroundHover:       $sDarkGray;
+$navbarLinkBackgroundActive:      darken($navbarBackground, 5%);
+
+// hero-unit
+$heroUnitBackground:              $sDesertStorm;
+
+
+// buttons
+$btnInfoBackground:               $sDarkGray; // gray buttons.
+
+
+//////////////////////
+// derived variables
+$sBodyPaddingTop: $navbarHeight+20px;

@@ -1,0 +1,20 @@
+%h3 Users
+
+%table.table
+  %tr
+    %th User
+    %th Email
+    %th Roles
+    %th created_at
+    %th
+
+  - @users.each do |u|
+    %tr
+      %td= u.name
+      %td= u.email
+      %td= u.roles.collect{|r| r.name }
+      %td= u.created_at
+      %td= link_to 'Show', u
+      %td= link_to 'Edit', user_registration_path(u)
+      
+%br

@@ -1,0 +1,65 @@
+%h1 Listing otto_view_raw_trips
+
+%table
+  %tr
+    %th Serial number
+    %th Trip number
+    %th Current time
+    %th Latitude
+    %th Longitude
+    %th Trip distance
+    %th Trip duration
+    %th Trip fuel usage
+    %th Fuel price
+    %th Trip fuel cost
+    %th Trip operating cost
+    %th Average economy
+    %th Survey completed
+    %th Driver number
+    %th Passengers8
+    %th Passengers15
+    %th Passengers24
+    %th Passengers64
+    %th Passengers74
+    %th Passengers75plus
+    %th Trip destination
+    %th Imei
+    %th Imsi
+    %th Report time
+    %th
+    %th
+    %th
+
+  - @otto_view_raw_trips.each do |otto_view_raw_trip|
+    %tr
+      %td= otto_view_raw_trip.serial_number
+      %td= otto_view_raw_trip.trip_number
+      %td= otto_view_raw_trip.current_time
+      %td= otto_view_raw_trip.latitude
+      %td= otto_view_raw_trip.longitude
+      %td= otto_view_raw_trip.trip_distance
+      %td= otto_view_raw_trip.trip_duration
+      %td= otto_view_raw_trip.trip_fuel_usage
+      %td= otto_view_raw_trip.fuel_price
+      %td= otto_view_raw_trip.trip_fuel_cost
+      %td= otto_view_raw_trip.trip_operating_cost
+      %td= otto_view_raw_trip.average_economy
+      %td= otto_view_raw_trip.survey_completed
+      %td= otto_view_raw_trip.driver_number
+      %td= otto_view_raw_trip.passengers8
+      %td= otto_view_raw_trip.passengers15
+      %td= otto_view_raw_trip.passengers24
+      %td= otto_view_raw_trip.passengers64
+      %td= otto_view_raw_trip.passengers74
+      %td= otto_view_raw_trip.passengers75plus
+      %td= otto_view_raw_trip.trip_destination
+      %td= otto_view_raw_trip.imei
+      %td= otto_view_raw_trip.imsi
+      %td= otto_view_raw_trip.report_time
+      %td= link_to 'Show', otto_view_raw_trip
+      %td= link_to 'Edit', edit_otto_view_raw_trip_path(otto_view_raw_trip)
+      %td= link_to 'Destroy', otto_view_raw_trip, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Otto view raw trip', new_otto_view_raw_trip_path

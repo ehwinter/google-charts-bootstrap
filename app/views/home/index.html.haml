@@ -1,0 +1,30 @@
+/ entire home page w/o navbar/footer.
+.row
+  .span9
+    .div.s-hero-unit
+      .row-fluid
+        %img.s-centered{src: "/assets/home-page/hp-shuttle-challenge.png"}
+      .row-fluid{style: "margin-top: 20px;"}
+        .span6
+          .div.s-centered
+            = link_to image_tag("/assets/home-page/hp-log-in.png"), new_access_path 
+        .span6.s-centered         
+          = link_to image_tag("/assets/home-page/hp-register-now.png"), "http://www.tc.gc.ca/cvus", :target=>'blank'  
+      .row-fluid
+        .span12{style: "margin-top: 10px; padding:10px;"}
+          = render partial: 'how_works_modal'
+
+    = render partial: 'impact_to_date'
+    = render partial: 'supporters'
+  .span3
+    = render partial: '/layouts/log_in'    
+    = render partial: '/pages/shuttle_beats'
+
+
+/= render partial: 'test'
+/= render partial: 'main_body'
+/= render partial: 'test_framing'
+/ a good demo.
+/= render partial: 'test_frame_types' 
+
+      

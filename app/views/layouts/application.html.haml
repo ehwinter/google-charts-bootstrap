@@ -1,0 +1,37 @@
+<!doctype html>
+%html
+  %head
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "width=device-width, height=device-height, initial-scale=1.0", :name => "viewport"}/
+    %title= content_for?(:title) ? yield(:title) : "Shuttle"
+    %meta{:content => "", :name => "description"}/
+    %meta{:content => "", :name => "author"}/
+    %meta{:'X-GitSHA' => Shuttle::Application::GIT_SHA}/
+    = stylesheet_link_tag    "application", :media => "all"
+    /%script{:src => "//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js", :type => "text/javascript"}
+    /%script{:src => "//ajax.googleapis.com/ajax/libs/jqueryui/1.8.21/jquery-ui.min.js", :type => "text/javascript"}
+    %script{src: 'http://www.google.com/jsapi'}
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+    = yield(:head)
+  %body
+    %header.navbar.navbar-fixed-top
+      %nav.navbar-inner
+        .container
+          = render 'layouts/navigation'
+
+
+    #main{:role => "main"}
+      .container
+        .content
+          .row
+            .span12
+              = render 'layouts/messages'
+              = yield
+          %footer.footer
+            .container
+              = render 'layouts/footer'
+              = render 'layouts/admin_footer'  if !current_user.nil? && current_user.has_role?(:admin)
+              = render 'layouts/sadmin_footer' if !current_user.nil? && current_user.has_role?(:super_admin)
+      / ! end of .container
+    / ! end of #main

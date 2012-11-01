@@ -1,0 +1,24 @@
+%h2 Sign up
+%p Leave us your contact information and address if you’re interested in taking part in a future Shuttle Challenge. We’ll contact you before our next Challenge begins to confirm your participation.
+= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
+  = devise_error_messages!
+  %p
+    = f.label :name
+    %br/
+    = f.text_field :name
+  %div
+    = f.label :email
+    %br/
+    = f.email_field :email
+  %div
+    = f.label :password
+    %br/
+    = f.password_field :password
+  %div
+    %p Future Shuttle Challenge programs may use a mobile app as a data logger for tracking your transit. If you’re interested in this option, let us know what type of mobile phone you use.
+  %div
+    = f.label :password_confirmation
+    %br/
+    = f.password_field :password_confirmation
+  %div= f.submit "Sign up"
+= render "devise/shared/links"

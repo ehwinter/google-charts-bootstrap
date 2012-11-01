@@ -1,0 +1,36 @@
+
+.span12
+  %a{"data-toggle" => "modal", :href => "#myModal"} 
+    %img{src: "/assets/home-page/hp-image-buttons1-o.png"}
+
+  #myModal.modal{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1",  
+  style: "display: none; width:700px; height:500px;"}
+    .modal-header
+      %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} ×
+      %h3#myModalLabel How Shuttle Works
+    .modal-body
+      = render partial: '/pages/how_shuttle_works' 
+      %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} close
+
+
+  %a{"data-toggle" => "modal", :href => "#rewards"}
+    %img{src: "/assets/home-page/hp-image-buttons2-o.png"}
+
+  #value.modal{"aria-hidden" => "true", "aria-labelledby" => "valueLabel", :role => "dialog", :tabindex => "-2", style: "display: none;"}
+    .modal-header
+      %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} ×
+      %h3#valueLabel Why Shuttle?
+    .modal-body
+      = render partial: '/pages/value_of_shuttle' 
+      %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} close
+
+  %a{"data-toggle" => "modal", :href => "#value"}
+    %img{src: "/assets/home-page/hp-image-buttons3-o.png"}
+
+  #rewards.modal{"aria-hidden" => "true", "aria-labelledby" => "rewardsLabel", :role => "dialog", :tabindex => "-3", style: "display: none;"}
+    .modal-header
+      %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} ×
+      %h3#rewardsLabel Rewards
+    .modal-body
+      = render partial: '/pages/rewards' 
+      %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} close

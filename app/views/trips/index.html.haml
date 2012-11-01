@@ -1,0 +1,37 @@
+%h1 Listing trips
+
+%table
+  %tr
+    %th User
+    %th Device
+    %th Serial number
+    %th Number
+    %th End date
+    %th Distance
+    %th Duration
+    %th Fuel usage
+    %th Dollars
+    %th Economy
+    %th
+    %th
+    %th
+
+  - @trips.each do |trip|
+    %tr
+      %td= trip.user_id
+      %td= trip.device_id
+      %td= trip.serial_number
+      %td= trip.number
+      %td= trip.end_date
+      %td= trip.distance
+      %td= trip.duration
+      %td= trip.fuel_usage
+      %td= trip.dollars
+      %td= trip.economy
+      %td= link_to 'Show', trip
+      %td= link_to 'Edit', edit_trip_path(trip)
+      %td= link_to 'Destroy', trip, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Trip', new_trip_path

@@ -1,0 +1,30 @@
+- j=1
+
+.accordion#accordion2
+  - i=1
+  - cid="collapse-#{i}-#{j}"
+  .accordion-group
+    .accordion-heading
+      %a.accordion-toggle{:'data-toggle' => "collapse", :'data-parent' => "#accordion2", :href => "##{cid}"}
+        How Shuttle Works?
+    .accordion-body.collapse{id: "#{cid}"}
+      .accordion-inner
+        =render partial: '/pages/how_shuttle_works_detail'
+  - i=2
+  - cid="collapse-#{i}-#{j}"
+  .accordion-group
+    .accordion-heading
+      %a.accordion-toggle{:'data-toggle' => "collapse", :'data-parent' => "#accordion2", :href => "##{cid}"}
+        Why Shuttle?
+    .accordion-body.collapse{id: "#{cid}"}
+      .accordion-inner 
+        =render partial: '/pages/why_shuttle_detail'
+  - i=3
+  - cid="collapse-#{i}-#{j}"
+  .accordion-group
+    .accordion-heading
+      %a.accordion-toggle{:'data-toggle' => "collapse", :'data-parent' => "#accordion2", :href => "##{cid}"}
+        Rewards
+    .accordion-body.collapse{id: "#{cid}"}
+      .accordion-inner 
+        =render partial: '/pages/rewards_detail'

@@ -1,0 +1,25 @@
+.header
+  - if !current_user.nil?
+    %h3.ehw-centered{style:'font-size:100%;margin-bottom:5px;text-align:center;'}Join the Conversation
+    %hr{style:'margin-bottom:10 px;margin-top:5px;color:#ccc;'}
+    %h4.ehw-centered{style:'font-size:100%;margin-bottom:5px;text-align:center;'}
+      = @shuttle_beats_subtitle.content
+    = render partial: '/posts/form'
+  - else
+    %h3.ehw-centered{style:'font-size:100%;'}WHAT SHUTTLE 
+    %h3.ehw-centered{style:'font-size:100%;'}DRIVERS ARE SAYING
+  %hr{style:'margin-bottom:10 px;margin-top:5px;color:#ccc;'}
+  .row-fluid
+    - if !current_user.nil?
+      .postbox-content-private
+        = render partial: '/posts/content' 
+    - else
+      .postbox-content-public
+        = render partial: '/posts/content'
+    
+  %hr{style:'margin-bottom:10 px;margin-top:5px;color:#ccc;'}
+  .row-fluid
+    .span5.offset4{style:"display:none;"}
+      =link_to image_tag('/assets/conversation/facebook.gif'), '/facebook', :target=>'blank'
+      =link_to image_tag('/assets/conversation/twitter.gif'), 'https://twitter.com/ShuttleImpact', :target=>'blank'
+  

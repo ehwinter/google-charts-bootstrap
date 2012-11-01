@@ -1,0 +1,26 @@
+
+.s-framing-muted.flush-top
+  .row-fluid{style:'height:60px;'}
+    .span6
+      - if user_signed_in?
+        = link_to 'Log Out', destroy_user_session_path, :method=>'delete', class: "btn btn-small btn-info"
+      - else
+        = link_to 'Log In', new_user_session_path, class: "btn btn-small btn-info"
+    .span6{style: 'text-align: right; padding:0,0,0,0px;'}
+      %ul.nav
+        - if user_signed_in?
+          -name="#{current_user.name.split[0]}"
+          - if name.length>14
+            - name=name.slice(0,12).ljust(15,".")
+          %li
+            .span{style: "font-weight:normal;font-size:10pt;"}
+              Hello
+              %p 
+              = link_to "#{name}", edit_user_registration_path, :style=>"font-weight:normal;font-size:10pt;"
+          - if current_user.has_role? :admin
+            %li
+              = link_to 'Admin', users_path
+        - else
+          %li
+            %font{style: "font-weight: normal;"}Welcome     
+/restart-server.sh

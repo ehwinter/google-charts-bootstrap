@@ -1,0 +1,28 @@
+DEPLOY INSTRUCTIONS
+
+#On dev machine
+
+branch='v1.0'  # the branch to pull in
+
+git status
+echo Branch $branch
+git checkout $branch || (echo "Kill this" && sleep 45)
+sleep 8
+git checkout master
+git merge --squash $branch
+git commit
+
+
+git checkout deploy
+git merge master
+git push shuttle deploy
+
+
+#On server
+cd ~/git/shuttle
+cap deploy
+cd ~/railsapps/shuttle/current
+rake assets:precompile
+sudo apachectl restart         # not really needed.
+
+

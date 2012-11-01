@@ -1,0 +1,22 @@
+.row-fluid
+  .s-framing.flush-top
+
+    .row-fluid
+      .span4
+        %h3{style:"font-size:14pt;" }
+          %img{src: "/assets/home-page/hp-icon-graph.png"}
+          KM Travelled
+        
+      .span8.pull-right
+        %img{src: "/assets/challenge/my-performance.gif"}      
+
+                
+    .row-fluid
+      .span12
+        %p
+          View distance driven in your 3 week baseline. Check daily to see how your Challenge compares.
+
+        - i=4
+        - chart_name = "chart"+(i+10).to_s
+        %div{id: chart_name}
+        = content_tag(:div, render_chart(@chart[i], chart_name),{id: "#"+chart_name})

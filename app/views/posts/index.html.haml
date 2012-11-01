@@ -1,0 +1,30 @@
+- if params[:show]
+  / this is the read more... page.
+  .ehw-framing
+    = render partial: 'new_and_index'
+  - else
+    = render partial: 'new_and_index'    
+  %br
+  
+- if !current_user.nil? && current_user.has_role?(:admin)
+  %hr.ehw-admin
+  %h1 Shuttle Beats: Admin View
+  %table
+    %tr
+      %th User
+      %th Content
+      %th
+      %th
+      %th
+  
+    - @posts.each do |post|
+      %tr
+        %td= post.user_id
+        %td= post.content
+        %td= link_to 'Show', post
+        %td= link_to 'Edit', edit_post_path(post)
+        %td= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete
+  
+  %br
+  
+  = link_to 'New Post', new_post_path

@@ -1,0 +1,14 @@
+/ Footer shown only to super_admin
+- if !current_user.nil? && current_user.has_role?(:super_admin)
+  %hr.ehw-super-admin
+  %h2 Super Admin Links
+  %h4
+    Current User:
+    = current_user.name
+  %h4 
+    Roles:
+    =current_user.roles.collect {|r| r.name + " "}
+  
+  %h3 All static pages
+  = render partial: '/layouts/sadmin_all_static'
+  = render partial: '/layouts/sadmin_models'

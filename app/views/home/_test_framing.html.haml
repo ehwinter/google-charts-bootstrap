@@ -1,0 +1,51 @@
+/ fluid/fixed + container
+/ fixed
+/ w/o container
+/ fluid row reguslar spans
+/ fixed with 
+/*
+
+/ referenece
+.row
+  .span9
+    %h3 reference - all fixed no fluid.
+    .div{style: "background-color: black;"}
+      %p= Faker::Lorem.paragraphs(5)
+  .span3
+    .div{style: "background-color: black;"}
+      %p= Faker::Lorem.paragraphs(5)
+
+.row.s-framing
+  .row-fluid 
+
+    .span9
+      %h3 perfect. Outer if framed, but inside frame only fluid items.
+      .div{style: "background-color: black;"}
+        %p= Faker::Lorem.paragraphs(5)
+    .span3
+      .div{style: "background-color: black;"}
+        %p= Faker::Lorem.paragraphs(5)
+        
+//fails
+.row.s-framing 
+  .span9
+    %h3 outer row framed. w/o fluid
+    .div{style: "background-color: black;"}
+      %p= Faker::Lorem.paragraphs(5)
+  .span3
+    .div{style: "background-color: black;"}
+      %p= Faker::Lorem.paragraphs(5)
+
+// framing squeezes it, fails slightly.
+.row-fluid.s-framing 
+
+  .span9
+    %h3 mild fail. outer row is fluid w/ outer container not fluid.
+    .div{style: "background-color: black;"}
+      %p= Faker::Lorem.paragraphs(5)
+  .span3
+    .div{style: "background-color: black;"}
+      %p= Faker::Lorem.paragraphs(5)
+// framing squeezes it, fails slightly.
+
+  

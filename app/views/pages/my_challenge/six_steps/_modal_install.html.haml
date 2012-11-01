@@ -1,0 +1,12 @@
+
+%a{"data-toggle" => "modal", :href => "#installModal"} 
+  %img{src: "/assets/challenge/2.png"}
+
+#installModal.modal{"aria-hidden" => "true", "aria-labelledby" => "installModalLabel", :role => "dialog", :tabindex => "-1",  style: "display: none;"}
+  .modal-header
+    %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} ×
+    %h3#installModalLabel Install
+  .modal-body
+    = render partial: '/pages/my_challenge/six_steps/text_install' 
+    %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} close
+

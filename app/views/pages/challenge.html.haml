@@ -1,0 +1,34 @@
+.row
+  .span9{style: "position:relative;"}
+  
+    = render partial: '/pages/my_challenge/header_static_test'
+    .div{style: "position: absolute; top: 63px; left: 200px; z-index: 1;"}
+      = render partial: '/pages/my_challenge/six_steps/modal_survey'
+      = render partial: '/pages/my_challenge/six_steps/modal_install'
+      = render partial: '/pages/my_challenge/six_steps/modal_baseline'
+      = render partial: '/pages/my_challenge/six_steps/modal_training'
+      = render partial: '/pages/my_challenge/six_steps/modal_challenge'
+      = render partial: '/pages/my_challenge/six_steps/modal_payout'
+
+    -if params[:s]=="0"
+      = render partial: '/pages/my_challenge/km_travelled'  
+      = render partial: '/pages/my_challenge/gas_consumption'
+    -elsif params[:s]=="1"
+      = render partial: '/pages/my_challenge/six_steps/text_survey'
+    -elsif params[:s]=="2"
+      = render partial: '/pages/my_challenge/six_steps/text_install'
+    -elsif params[:s]=="3"
+      = render partial: '/pages/my_challenge/six_steps/text_baseline'
+    -elsif params[:s]=="4"
+      = render partial: '/pages/my_challenge/six_steps/text_training'
+    -elsif params[:s]=="5"
+      = render partial: '/pages/my_challenge/six_steps/text_challenge'
+    -elsif params[:s]=="6"
+      = render partial: '/pages/my_challenge/six_steps/text_payout'
+    -else
+      = render partial: '/pages/my_challenge/landing'
+             
+  .span3
+    = render partial: '/layouts/log_in'    
+    = render partial: '/pages/shuttle_beats'
+/=render partial: '/pages/my_challenge/charts_old_test'

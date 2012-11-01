@@ -1,0 +1,180 @@
+= form_for @transport_canada_registration do |f|
+  -if @transport_canada_registration.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@transport_canada_registration.errors.count, "error")} prohibited this transport_canada_registration from being saved:"
+      %ul
+        - @transport_canada_registration.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :e_mailaddress
+    = f.text_field :e_mailaddress 
+  .field
+    = f.label :accesscode
+    = f.text_field :accesscode
+  .field
+    = f.label :logger_id
+    = f.number_field :logger_id
+  .field
+    = f.label :firstname
+    = f.text_field :firstname
+  .field
+    = f.label :lastname
+    = f.text_field :lastname  
+  .field
+    = f.label :start_date
+    = f.datetime_select :start_date    
+  .field
+    = f.label :end_date
+    = f.datetime_select :end_date 
+    
+  .field
+    = f.label :logger_partvin
+    = f.text_field :logger_partvin
+  .field
+    = f.label :callresult
+    = f.text_field :callresult
+  .field
+    = f.label :l_type
+    = f.text_field :l_type
+  .field
+    = f.label :batch
+    = f.text_field :batch
+  .field
+    = f.label :province
+    = f.text_field :province
+  .field
+    = f.label :preflanguage
+    = f.text_field :preflanguage
+  
+
+  .field
+    = f.label :phonenumber
+    = f.text_field :phonenumber
+
+  .field
+    = f.label :number
+    = f.text_field :number
+  .field
+    = f.label :street
+    = f.text_field :street
+  .field
+    = f.label :city
+    = f.text_field :city
+  .field
+    = f.label :postalcode
+    = f.text_field :postalcode
+  .field
+    = f.label :vehicle
+    = f.text_field :vehicle
+  .field
+    = f.label :vin
+    = f.text_field :vin
+  .field
+    = f.label :province
+    = f.text_field :province
+  .field
+    = f.label :havevehicle
+    = f.text_field :havevehicle
+  .field
+    = f.label :since_day
+    = f.text_field :since_day
+  .field
+    = f.label :since_month
+    = f.text_field :since_month
+  .field
+    = f.label :since_year
+    = f.text_field :since_year
+  .field
+    = f.label :name_2
+    = f.text_field :name_2
+  .field
+    = f.label :gender_2
+    = f.text_field :gender_2
+  .field
+    = f.label :yob_2
+    = f.text_field :yob_2
+  .field
+    = f.label :name_3
+    = f.text_field :name_3
+  .field
+    = f.label :gender_3
+    = f.text_field :gender_3
+  .field
+    = f.label :yob_3
+    = f.text_field :yob_3
+  .field
+    = f.label :name_4
+    = f.text_field :name_4
+  .field
+    = f.label :gender_4
+    = f.text_field :gender_4
+  .field
+    = f.label :yob_4
+    = f.text_field :yob_4
+  .field
+    = f.label :name_5
+    = f.text_field :name_5
+  .field
+    = f.label :gender_5
+    = f.text_field :gender_5
+  .field
+    = f.label :yob_5
+    = f.text_field :yob_5
+  .field
+    = f.label :name_6
+    = f.text_field :name_6
+  .field
+    = f.label :gender_6
+    = f.text_field :gender_6
+  .field
+    = f.label :yob_6
+    = f.text_field :yob_6
+  .field
+    = f.label :age_range_2
+    = f.text_field :age_range_2
+  .field
+    = f.label :age_range_3
+    = f.text_field :age_range_3
+  .field
+    = f.label :age_range_4
+    = f.text_field :age_range_4
+  .field
+    = f.label :age_range_5
+    = f.text_field :age_range_5
+  .field
+    = f.label :age_range_6
+    = f.text_field :age_range_6
+  .field
+    = f.label :yearofbirthanswered
+    = f.text_field :yearofbirthanswered
+  .field
+    = f.label :age
+    = f.text_field :age
+  .field
+    = f.label :agerange
+    = f.text_field :agerange
+  .field
+    = f.label :gender
+    = f.text_field :gender
+  .field
+    = f.label :typeoffuel
+    = f.text_field :typeoffuel
+  .field
+    = f.label :transmission
+    = f.text_field :transmission
+  .field
+    = f.label :completedonline
+    = f.text_field :completedonline
+  .field
+    = f.label :finalstatus
+    = f.text_field :finalstatus
+
+  .field
+    = f.label :assigndate
+    = f.datetime_select :assigndate
+  .field
+    = f.label :returndate
+    = f.datetime_select :returndate
+  .actions
+    = f.submit 'Save'

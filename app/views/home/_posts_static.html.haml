@@ -1,0 +1,12 @@
+%h3 
+  WHAT SHUTTLE DRIVERS ARE SAYING
+%hr
+- (1..5).each do |name|          
+  %p
+    %b
+      =Faker::Name.name 
+    says:
+    %i
+      1 hour ago
+    %br 
+    =Faker::Lorem.sentence(10)      

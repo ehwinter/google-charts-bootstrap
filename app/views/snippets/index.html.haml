@@ -1,0 +1,22 @@
+%h1 Listing snippets
+
+%table.table
+  %tr
+    %th Name
+    %th Content
+    %th
+    %th
+    %th
+
+  - @snippets.each do |snippet|
+    %tr
+      %td= snippet.name
+      %td= snippet.content
+      %td= link_to 'Show', snippet
+      %td= link_to 'Edit', edit_snippet_path(snippet)
+      - if current_user.has_role? :super_admin
+        %td= link_to 'Destroy', snippet, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Snippet', new_snippet_path

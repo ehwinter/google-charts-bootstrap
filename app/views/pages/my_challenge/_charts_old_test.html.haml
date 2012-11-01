@@ -1,0 +1,33 @@
+.row
+  .span12
+    %h1.page-title
+      Grid Layout
+    .row
+      .span8
+        .widget
+          .widget-header
+            %i.icon-signal
+            %h3 Compare Your Results with Your Group
+          .widget-content
+            - (3..4).each do |i|
+              %h3 
+                = @titles[i]
+              - chart_name = "chart"+(i+10).to_s
+              %div{id: chart_name}
+              = content_tag(:div, render_chart(@chart[i], chart_name),{id: "#"+chart_name})
+              %p
+                = @comments[i]
+              - Faker::Lorem.paragraph
+              %p 
+                = Faker::Lorem.paragraph                            
+          / /widget-content
+        / /widget
+      / /span
+      .span4
+        = render partial: 'shuttle_beats'
+      / /span
+    / /row
+  / /span9
+/ /row
+/ /container
+/ /content

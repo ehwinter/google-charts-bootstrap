@@ -1,0 +1,41 @@
+/ fluid/fixed + container
+/ fixed
+/ w/o container
+/ fluid row reguslar spans
+/ fixed with 
+/*
+.container
+  .row
+    .span9
+      .div{style: "background-color: black;"}
+        %p= Faker::Lorem.paragraphs(5)
+    .span3
+      .div{style: "background-color: black;"}
+        %p= Faker::Lorem.paragraphs(5)
+
+.row
+  .span9
+    .div{style: "background-color: black;"}
+      %p= Faker::Lorem.paragraphs(5)
+  .span3
+    .div{style: "background-color: black;"}
+      %p= Faker::Lorem.paragraphs(5)
+      
+      
+.container
+  .row-fluid
+    .span9
+      .div{style: "background-color: black;"}
+        %p= Faker::Lorem.paragraphs(5)
+    .span3
+      .div{style: "background-color: black;"}
+        %p= Faker::Lorem.paragraphs(5)
+
+.row-fluid
+  .span9
+    .div{style: "background-color: black;"}
+      %p= Faker::Lorem.paragraphs(5)
+  .span3
+    .div{style: "background-color: black;"}
+      %p= Faker::Lorem.paragraphs(5)
+            

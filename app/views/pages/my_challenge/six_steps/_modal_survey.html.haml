@@ -1,0 +1,12 @@
+
+%a{"data-toggle" => "modal", :href => "#surveyModal"} 
+  %img{src: "/assets/challenge/1.png"}
+
+#surveyModal.modal{"aria-hidden" => "true", "aria-labelledby" => "surveyModalLabel", :role => "dialog", :tabindex => "-1",  style: "display: none;"}
+  .modal-header
+    %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} ×
+    %h3#surveyModalLabel Survey
+  .modal-body
+    = render partial: '/pages/my_challenge/six_steps/text_survey' 
+    %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} close
+

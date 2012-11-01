@@ -1,0 +1,53 @@
+/experiment with frame margins.
+
+
+
+.row.s-framing
+  .row-fluid 
+    .span12
+      .div{style: "background-color: black;"}
+        %p= Faker::Lorem.paragraphs(5)
+.row-fluid 
+  .span9.s-framing
+    %h3 perfect. Outer if framed, but inside frame only fluid items.
+    .div{style: "background-color: black;"}
+      %p= Faker::Lorem.paragraphs(5)
+  .span3.s-framing
+    .div{style: "background-color: black;"}
+      %p= Faker::Lorem.paragraphs(5)
+      
+.row 
+  .span9.s-framing
+    %h3 perfect. Outer if framed, but inside frame only fluid items.
+    .div{style: "background-color: black;"}
+    .row-fluid
+      .span9.s-framing
+        %h3 perfect. Outer if framed, but inside frame only fluid items.
+        .div{style: "background-color: black;"}
+          %p= Faker::Lorem.paragraphs(5)
+              
+      .span3.s-framing
+        .div{style: "background-color: black;"}
+          %p= Faker::Lorem.paragraphs(5)
+
+
+
+.row 
+  .span9.s-framing
+    .row-fluid
+      
+    .div{style: "background-color: black;"}
+      %p= Faker::Lorem.paragraphs(5)
+  .span3.s-framing
+    .div{style: "background-color: black;"}
+      %p= Faker::Lorem.paragraphs(5)
+      
+/ referenece
+.row
+  .span9
+    %h3 reference - all fixed no fluid.
+    .div{style: "background-color: black;"}
+      %p= Faker::Lorem.paragraphs(5)
+  .span3
+    .div{style: "background-color: black;"}
+      %p= Faker::Lorem.paragraphs(5)  

@@ -1,0 +1,167 @@
+%h1 FAQs
+%h3 Registration
+
+- j=1
+.accordion#accordion2
+
+  - i=1
+  - cid="collapse-#{i}-#{j}"
+  .accordion-group
+    .accordion-heading
+      %a.accordion-toggle{:'data-toggle' => "collapse", :'data-parent' => "#accordion2", :href => "##{cid}"}
+        I didn’t receive a letter from Transport Canada but would like to participate in Shuttle. What can I do?
+    .accordion-body.collapse{id: "#{cid}"}
+      .accordion-inner 
+        We’ll be holding more Shuttle Challenges in 2013. Please contact us and leave your name and contact information so we can notify you during the next registration phase
+  - i=2
+  - cid="collapse-#{i}-#{j}"
+  .accordion-group
+    .accordion-heading
+      %a.accordion-toggle{:'data-toggle' => "collapse", :'data-parent' => "#accordion2", :href => "##{cid}"}
+        If I register for Transport Canada’s Canadian Vehicle Use Study, do I need to register separately for the Shuttle Challenge?
+    .accordion-body.collapse{id: "#{cid}"}
+      .accordion-inner 
+        No. By registering for Transport Canada’s Canadian Vehicle Use Study you are automatically registered for the Shuttle Challenge.
+        
+%h3 Signing In
+- j=2
+.accordion#accordion3
+
+  - i=1
+  - cid="collapse-#{i}-#{j}"
+  .accordion-group
+    .accordion-heading
+      %a.accordion-toggle{:'data-toggle' => "collapse", :'data-parent' => "#accordion3", :href => "##{cid}"}
+        I’m trying to sign-in but it’s not working. What should I do?
+    .accordion-body.collapse{id: "#{cid}"}
+      .accordion-inner 
+        %li If it’s your first time signing in, ensure you’re using your reference code provided in the letter from Transport Canada that accompanied your data logger. You can only sign in once you’ve received your data logger.
+        %li If you’ve received your data logger and your sign-in is still not working, please wait a day or two and then try again. There may be a delay registering you into the Shuttle system. If problems persist, please contact us for assistance
+        %li If you’ve already selected your sign-in name and password and are having difficulty signing in, please contact us for assistance
+
+  - i=2
+  - cid="collapse-#{i}-#{j}"
+  .accordion-group
+    .accordion-heading
+      %a.accordion-toggle{:'data-toggle' => "collapse", :'data-parent' => "#accordion3", :href => "##{cid}"}
+        I don’t know my reference code. Where can I find this?
+    .accordion-body.collapse{id: "#{cid}"}
+      .accordion-inner 
+        All letters from Transport Canada and emails from Summerhill Impact list your reference code. Please save this code as you will need it to complete the surveys and Eco Driver Training.
+  - i=3
+  - cid="collapse-#{i}-#{j}"
+  .accordion-group
+    .accordion-heading
+      %a.accordion-toggle{:'data-toggle' => "collapse", :'data-parent' => "#accordion3", :href => "##{cid}"}
+        I didn’t receive a letter from Transport Canada but would like to participate in Shuttle. What can I do?
+    .accordion-body.collapse{id: "#{cid}"}
+      .accordion-inner 
+        We’ll be holding more Shuttle Challenges in 2013. Please contact us and leave your name and contact information so we can notify you during the next registration phase        
+
+%h3 My Challenge page (for active participants only)
+- j=3
+.accordion#accordion4
+
+  - i=1
+  - cid="collapse-#{i}-#{j}"
+  .accordion-group
+    .accordion-heading
+      %a.accordion-toggle{:'data-toggle' => "collapse", :'data-parent' => "#accordion4", :href => "##{cid}"}
+        I see a value for $ Saved and GHG Reduced. What does this mean?
+    .accordion-body.collapse{id: "#{cid}"}
+      .accordion-inner 
+        %li $ Saved is calculated based on a vehicle’s fuel consumption at a cost of $1.17 per litre. During the 3 week Challenge period, reduced gas consumption compared to the initial 3 week baseline is reflected here.
+        %li GHG Reduced is the green house gas emissions reduced as a result travelling less distance. For the calculation, the following assumptions have been made:
+        %ul
+          %li The vehicle driven is a mid-sized car. Those driving a compact, hybrid or electric vehicle  may have lower GHG reductions and those driving a larger truck or SUV may have higher GHG reductions
+          %li GHGs = carbon dioxide equivalents (CO2e) where 0.002352 kg of CO2e are saved for each  1km reduced
+        %li The GHG calculation is based on Nova Scotia Environment’s Carbon Calculator developed by CSA Standards [link “Carbon Calculator” to http://www.climatechange.gov.ns.ca/ghgcalculators/documents/Carbon%20Footprint%20Calculators%20Guidance%20Document.pdf ]
+  
+  - i=2
+  - cid="collapse-#{i}-#{j}"
+  .accordion-group
+    .accordion-heading
+      %a.accordion-toggle{:'data-toggle' => "collapse", :'data-parent' => "#accordion4", :href => "##{cid}"}
+        There are two buttons for Drive Better and Drive Less, but I can’t access them. Why not?
+    .accordion-body.collapse{id: "#{cid}"}
+      .accordion-inner 
+        %li The Drive Better and Drive Less buttons are only active once your 3 week baseline is complete
+  - i=3
+  - cid="collapse-#{i}-#{j}"
+  .accordion-group
+    .accordion-heading
+      %a.accordion-toggle{:'data-toggle' => "collapse", :'data-parent' => "#accordion4", :href => "##{cid}"}
+        What are the dates for each step during Shuttle Challenge?
+    .accordion-body.collapse{id: "#{cid}"}
+      .accordion-inner 
+        %li The key dates for each step depend on your start date. Select your start date from the following table to view the key dates for each step during Shuttle Challenge [insert the date table here]
+        
+%h3 Rewards
+- j=4
+.accordion#accordion5
+
+  - i=1
+  - cid="collapse-#{i}-#{j}"
+  .accordion-group
+    .accordion-heading
+      %a.accordion-toggle{:'data-toggle' => "collapse", :'data-parent' => "#accordion5", :href => "##{cid}"}
+        When will I receive my rewards? 
+    .accordion-body.collapse{id: "#{cid}"}
+      .accordion-inner 
+        %li All rewards from Phase One and Phase Two will be issued to qualifying participants in December 2012
+  
+  - i=2
+  - cid="collapse-#{i}-#{j}"
+  .accordion-group
+    .accordion-heading
+      %a.accordion-toggle{:'data-toggle' => "collapse", :'data-parent' => "#accordion5", :href => "##{cid}"}
+        Do I need to achieve a 10% reduction every day to qualify for the Challenge rewards? 
+    .accordion-body.collapse{id: "#{cid}"}
+      .accordion-inner 
+        No. You only need a total reduction of 10% over your 3 week baseline. You can achieve this by making small reductions each day of the Challenge, or make large reductions on specific days. As long as you reduce both your driving distance and gas consumption by 10% overall during the challenge period, you will qualify.
+
+  - i=3
+  - cid="collapse-#{i}-#{j}"
+  .accordion-group
+    .accordion-heading
+      %a.accordion-toggle{:'data-toggle' => "collapse", :'data-parent' => "#accordion5", :href => "##{cid}"}
+        Do I need to achieve a 10% reduction in both kilometers (km) travelled and gas consumed to qualify for my rewards?
+    .accordion-body.collapse{id: "#{cid}"}
+      .accordion-inner 
+        Yes. Compared to your total 3 week Baseline, your total 3 week Challenge must be 10% less in both kilometers travelled and gas consumed.  Please note: If you reduce your kilometers travelled and gas consumed by 5%, you qualify for a $10 gas card
+  - i=4
+  - cid="collapse-#{i}-#{j}"
+  .accordion-group
+    .accordion-heading
+      %a.accordion-toggle{:'data-toggle' => "collapse", :'data-parent' => "#accordion5", :href => "##{cid}"}
+        Where does the money for the rewards come from?
+    .accordion-body.collapse{id: "#{cid}"}
+      .accordion-inner 
+        Funding for Shuttle, including for the gas cards and the final draw of $2,500, is provided by Toronto Atmospheric Fund, Ontario Centre for Excellence and the Auto Recyclers of Canada.
+        %p As part of the Canadian Vehicle Use Study, Transport Canada provides draw incentives to reward participation and the return of their data loggers at the end of the Study period. The draws for $1,000 and $1,500 are provided courtesy of Transport Canada
+        
+%h3 About Shuttle
+
+- j=5
+.accordion#accordion6
+
+  - i=1
+  - cid="collapse-#{i}-#{j}"
+  .accordion-group
+    .accordion-heading
+      %a.accordion-toggle{:'data-toggle' => "collapse", :'data-parent' => "#accordion6", :href => "##{cid}"}
+        Is Shuttle a government program?
+    .accordion-body.collapse{id: "#{cid}"}
+      .accordion-inner 
+        No. Shuttle is a program of Summerhill Impact, a national not-for-profit organization that designs programs that enable Canadians to take action in their daily lives.
+  - i=2
+  - cid="collapse-#{i}-#{j}"
+  .accordion-group
+    .accordion-heading
+      %a.accordion-toggle{:'data-toggle' => "collapse", :'data-parent' => "#accordion6", :href => "##{cid}"}
+        What is Transport Canada’s Canadian Vehicle Use Survey?
+    .accordion-body.collapse{id: "#{cid}"}
+      .accordion-inner 
+        The Canadian Vehicle Use Study is an initiative of Transport Canada focused on improving road safety, reducing traffic congestion, and documenting real-world fuel consumption. This study is the only comprehensive source of information on motor vehicle use patterns in Canada.   For more information, visit www.tc.gc.ca/cvus
+
+

@@ -1,0 +1,25 @@
+%h1 Listing accesses
+
+%table
+  %tr
+    %th User
+    %th Code
+    %th Username
+    %th Location
+    %th
+    %th
+    %th
+
+  - @accesses.each do |access|
+    %tr
+      %td= access.user_id
+      %td= access.code
+      %td= access.username
+      %td= access.location
+      %td= link_to 'Show', access
+      %td= link_to 'Edit', edit_access_path(access)
+      %td= link_to 'Destroy', access, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Access', new_access_path

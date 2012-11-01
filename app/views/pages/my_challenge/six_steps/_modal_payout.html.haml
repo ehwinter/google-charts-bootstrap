@@ -1,0 +1,12 @@
+
+%a{"data-toggle" => "modal", :href => "#payoutModal"} 
+  %img{src: "/assets/challenge/6.png"}
+
+#payoutModal.modal{"aria-hidden" => "true", "aria-labelledby" => "payoutModalLabel", :role => "dialog", :tabindex => "-1",  style: "display: none;"}
+  .modal-header
+    %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} ×
+    %h3#payoutModalLabel Payout
+  .modal-body
+    = render partial: '/pages/my_challenge/six_steps/text_payout' 
+    %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} close
+

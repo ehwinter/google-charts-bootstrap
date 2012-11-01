@@ -1,0 +1,20 @@
+-@posts.each do |p|
+  -name= "#{p.user.name.split[0]}"
+  - if name.length>14
+    - name=name.slice(0,12).ljust(15,".")
+  - ts=time_ago_in_words(p.created_at)
+  - ts=ts.sub("about ","")
+  - ts=ts.sub(" minutes","m").sub(" minute ","m ")
+  - ts=ts.sub(" months","mon ").sub(" month ","mon ")
+  - ts=ts.sub(" years","yr ").sub(" year ","yr ")
+  - ts=ts.sub(" days","d ").sub(" day ","d") 
+  - ts=ts.sub(" hours","h").sub(" hour ","h ")
+  .row-fluid
+    .span12
+      .span6.name{style:"font-weight:normal;font-size:10pt;"}
+        = "#{name}:"
+      .span6.time
+        = "#{ts} ago".rjust(20,' ')
+  .row-fluid
+    .span12
+      = "#{p.content.slice(0, 40)}"

@@ -1,0 +1,12 @@
+
+%a{"data-toggle" => "modal", :href => "#challengeModal"} 
+  %img{src: "/assets/challenge/5.png"}
+
+#challengeModal.modal{"aria-hidden" => "true", "aria-labelledby" => "challengeModalLabel", :role => "dialog", :tabindex => "-1",  style: "display: none;"}
+  .modal-header
+    %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} ×
+    %h3#challengeModalLabel Challenge
+  .modal-body
+    = render partial: '/pages/my_challenge/six_steps/text_challenge' 
+    %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} close
+

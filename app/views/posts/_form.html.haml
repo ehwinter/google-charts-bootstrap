@@ -1,0 +1,19 @@
+.span12.s-centered.s-unpad
+  = form_for @post do |f| 
+    -if @post.errors.any?
+      #error_explanation
+        %h2= "#{pluralize(@post.errors.count, "error")} prohibited this post from being saved:"
+        %ul
+          - @post.errors.full_messages.each do |msg|
+            %li= msg
+    -if current_user.has_role? :super_admin
+      .row-fluid
+        .span12
+          .field
+            = f.label :user_id
+            = f.number_field :user_id
+    .field
+      = f.text_area :content, {id: "textarea", class: "input", rows: "3", maxlength:"150"}
+    .actions
+      = f.submit 'Share', {class: "btn btn-danger btn-large"}
+  

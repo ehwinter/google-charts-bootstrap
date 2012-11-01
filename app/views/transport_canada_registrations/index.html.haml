@@ -1,0 +1,129 @@
+%h1 Listing transport_canada_registrations
+
+%table
+  %tr
+    %th Accesscode
+    %th Logger partvin
+    %th Callresult
+    %th L type
+    %th Batch
+    %th Province
+    %th Preflanguage
+    %th Start date
+    %th End date
+    %th Firstname
+    %th Lastname
+    %th Phonenumber
+    %th E mailaddress
+    %th Number
+    %th Street
+    %th City
+    %th Postalcode
+    %th Vehicle
+    %th Vin
+    %th Province
+    %th Havevehicle
+    %th Whynot
+    %th Since day
+    %th Since month
+    %th Since year
+    %th Name 2
+    %th Gender 2
+    %th Yob 2
+    %th Name 3
+    %th Gender 3
+    %th Yob 3
+    %th Name 4
+    %th Gender 4
+    %th Yob 4
+    %th Name 5
+    %th Gender 5
+    %th Yob 5
+    %th Name 6
+    %th Gender 6
+    %th Yob 6
+    %th Age range 2
+    %th Age range 3
+    %th Age range 4
+    %th Age range 5
+    %th Age range 6
+    %th Yearofbirthanswered
+    %th Age
+    %th Agerange
+    %th Gender
+    %th Typeoffuel
+    %th Transmission
+    %th Completedonline
+    %th Finalstatus
+    %th Logger
+    %th Assigndate
+    %th Returndate
+    %th
+    %th
+    %th
+
+  - @transport_canada_registrations.each do |transport_canada_registration|
+    %tr
+      %td= transport_canada_registration.accesscode
+      %td= transport_canada_registration.logger_partvin
+      %td= transport_canada_registration.callresult
+      %td= transport_canada_registration.l_type
+      %td= transport_canada_registration.batch
+      %td= transport_canada_registration.province
+      %td= transport_canada_registration.preflanguage
+      %td= transport_canada_registration.start_date
+      %td= transport_canada_registration.end_date
+      %td= transport_canada_registration.firstname
+      %td= transport_canada_registration.lastname
+      %td= transport_canada_registration.phonenumber
+      %td= transport_canada_registration.e_mailaddress
+      %td= transport_canada_registration.number
+      %td= transport_canada_registration.street
+      %td= transport_canada_registration.city
+      %td= transport_canada_registration.postalcode
+      %td= transport_canada_registration.vehicle
+      %td= transport_canada_registration.vin
+      %td= transport_canada_registration.province
+      %td= transport_canada_registration.havevehicle
+      %td= transport_canada_registration.whynot
+      %td= transport_canada_registration.since_day
+      %td= transport_canada_registration.since_month
+      %td= transport_canada_registration.since_year
+      %td= transport_canada_registration.name_2
+      %td= transport_canada_registration.gender_2
+      %td= transport_canada_registration.yob_2
+      %td= transport_canada_registration.name_3
+      %td= transport_canada_registration.gender_3
+      %td= transport_canada_registration.yob_3
+      %td= transport_canada_registration.name_4
+      %td= transport_canada_registration.gender_4
+      %td= transport_canada_registration.yob_4
+      %td= transport_canada_registration.name_5
+      %td= transport_canada_registration.gender_5
+      %td= transport_canada_registration.yob_5
+      %td= transport_canada_registration.name_6
+      %td= transport_canada_registration.gender_6
+      %td= transport_canada_registration.yob_6
+      %td= transport_canada_registration.age_range_2
+      %td= transport_canada_registration.age_range_3
+      %td= transport_canada_registration.age_range_4
+      %td= transport_canada_registration.age_range_5
+      %td= transport_canada_registration.age_range_6
+      %td= transport_canada_registration.yearofbirthanswered
+      %td= transport_canada_registration.age
+      %td= transport_canada_registration.agerange
+      %td= transport_canada_registration.gender
+      %td= transport_canada_registration.typeoffuel
+      %td= transport_canada_registration.transmission
+      %td= transport_canada_registration.completedonline
+      %td= transport_canada_registration.finalstatus
+      %td= transport_canada_registration.logger_id
+      %td= transport_canada_registration.assigndate
+      %td= transport_canada_registration.returndate
+      %td= link_to 'Show', transport_canada_registration
+      %td= link_to 'Edit', edit_transport_canada_registration_path(transport_canada_registration)
+      %td= link_to 'Destroy', transport_canada_registration, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Transport canada registration', new_transport_canada_registration_path

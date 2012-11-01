@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b User:
+  = @access.user_id
+%p
+  %b Code:
+  = @access.code
+%p
+  %b Username:
+  = @access.username
+%p
+  %b Location:
+  = @access.location
+
+= link_to 'Edit', edit_access_path(@access)
+\|
+= link_to 'Back', accesses_path

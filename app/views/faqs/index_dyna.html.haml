@@ -1,0 +1,36 @@
+%h1 FAQs
+.accordion#accordion2
+
+  - i=0
+  - @faqs.each do |faq|
+    -if faq.display
+      - i+=1
+      - cid="collapse-#{i}"
+      .accordion-group
+        .accordion-heading
+          %a.accordion-toggle{:'data-toggle' => "collapse", :'data-parent' => "#accordion2", :href => "##{cid}"}
+            = faq.question
+        .accordion-body.collapse{id: "#{cid}"}
+          .accordion-inner
+            =faq.answer
+
+
+-if !current_user.nil? && current_user.has_role?(:admin)
+
+  %hr.ehw-admin
+  %h2 Admin: Manage FAQs
+  %table.table
+    %tr
+      %th Question
+      %th
+      %th
+      %th
+    - @faqs.each do |faq|
+      %tr
+        %td= faq.question
+        %td= link_to 'Show', faq
+        %td= link_to 'Edit', edit_faq_path(faq)
+        %td= link_to 'Destroy', faq, :confirm => 'Are you sure?', :method => :delete
+  %br
+  %hr
+  = link_to 'New Faq', new_faq_path

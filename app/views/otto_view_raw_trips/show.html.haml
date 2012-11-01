@@ -1,0 +1,78 @@
+%p#notice= notice
+
+%p
+  %b Serial number:
+  = @otto_view_raw_trip.serial_number
+%p
+  %b Trip number:
+  = @otto_view_raw_trip.trip_number
+%p
+  %b Current time:
+  = @otto_view_raw_trip.current_time
+%p
+  %b Latitude:
+  = @otto_view_raw_trip.latitude
+%p
+  %b Longitude:
+  = @otto_view_raw_trip.longitude
+%p
+  %b Trip distance:
+  = @otto_view_raw_trip.trip_distance
+%p
+  %b Trip duration:
+  = @otto_view_raw_trip.trip_duration
+%p
+  %b Trip fuel usage:
+  = @otto_view_raw_trip.trip_fuel_usage
+%p
+  %b Fuel price:
+  = @otto_view_raw_trip.fuel_price
+%p
+  %b Trip fuel cost:
+  = @otto_view_raw_trip.trip_fuel_cost
+%p
+  %b Trip operating cost:
+  = @otto_view_raw_trip.trip_operating_cost
+%p
+  %b Average economy:
+  = @otto_view_raw_trip.average_economy
+%p
+  %b Survey completed:
+  = @otto_view_raw_trip.survey_completed
+%p
+  %b Driver number:
+  = @otto_view_raw_trip.driver_number
+%p
+  %b Passengers8:
+  = @otto_view_raw_trip.passengers8
+%p
+  %b Passengers15:
+  = @otto_view_raw_trip.passengers15
+%p
+  %b Passengers24:
+  = @otto_view_raw_trip.passengers24
+%p
+  %b Passengers64:
+  = @otto_view_raw_trip.passengers64
+%p
+  %b Passengers74:
+  = @otto_view_raw_trip.passengers74
+%p
+  %b Passengers75plus:
+  = @otto_view_raw_trip.passengers75plus
+%p
+  %b Trip destination:
+  = @otto_view_raw_trip.trip_destination
+%p
+  %b Imei:
+  = @otto_view_raw_trip.imei
+%p
+  %b Imsi:
+  = @otto_view_raw_trip.imsi
+%p
+  %b Report time:
+  = @otto_view_raw_trip.report_time
+
+= link_to 'Edit', edit_otto_view_raw_trip_path(@otto_view_raw_trip)
+\|
+= link_to 'Back', otto_view_raw_trips_path

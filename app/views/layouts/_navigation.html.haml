@@ -1,0 +1,20 @@
+= link_to image_tag("/assets/home-page/shuttle-logo.png"), root_path, :class => 'brand'
+%ul.nav.pull-right
+  - unless current_user
+    %li
+      = link_to 'HOME', root_path
+  - else
+    %li
+      = link_to 'MY CHALLENGE', pages_challenge_path  
+  %li
+    = link_to 'ABOUT',       pages_about_path
+  %li
+    = link_to 'REWARDS',  pages_rewards_detail_path
+  %li
+    = link_to 'FAQ',         faqs_path
+  %li
+    = link_to 'SUPPORTERS',  pages_supporters_path
+  %li
+    = link_to 'CONTACT',     pages_contact_path
+
+    

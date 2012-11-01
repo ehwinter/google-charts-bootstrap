@@ -1,0 +1,27 @@
+.row.s-framing
+  %h3 
+    %img{src: "/assets/home-page/hp-icon-graph.png"}
+    %span{style:"font-size:14pt;font-family: Arial, Helvetica,sans-serif;margin-top:20px;"} Shuttle Community Impact
+  .pull-right
+    .subtitle
+      %font{style:'color:#6d6f71;'} 
+  -if false # Turn on after baseline
+    %div
+      .pull-right
+        .subtitle
+          %font{style:'color:#6d6f71;'}GHG = Green House Gases
+    .row.s-callout-area{style:'font-size:18pt;'}
+      %em  
+        $ SAVED =
+      %b<
+        $
+        =@results[:all][:dollars].round(2)
+      .pull-right
+        %em
+          GHG REDUCED =
+        %b<
+          =@results[:all][:ghg].round(3).to_s+"kg"
+  -else
+    %h5
+      %center
+        %font{style:'color:#6d6f71;'}If 10% of Greater Toronto and Hamilton Area drivers participated in Shuttle, we could reduce over 64,000 tonnes of greenhouse gas emissions while reducing congestion and accident rates.
